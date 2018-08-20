@@ -6,8 +6,10 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 import com.imooc.miaosha.domain.MiaoshaUser;
+import org.springframework.stereotype.Service;
 
 @Mapper
+@Service
 public interface MiaoshaUserDao {
 	
 	@Select("select * from miaosha_user where id = #{id}")
