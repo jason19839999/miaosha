@@ -1,6 +1,8 @@
 package com.imooc.miaosha.rabbitmq;
 
+import com.rabbitmq.client.ConnectionFactory;
 import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
