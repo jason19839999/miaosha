@@ -9,8 +9,10 @@ import org.apache.ibatis.annotations.SelectKey;
 
 import com.imooc.miaosha.domain.MiaoshaOrder;
 import com.imooc.miaosha.domain.OrderInfo;
+import org.springframework.stereotype.Service;
 
 @Mapper
+@Service
 public interface OrderDao {
 	
 	@Select("select * from miaosha_order where user_id=#{userId} and goods_id=#{goodsId}")
