@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="679a2d9b-fe99-4e95-bacb-617f2ee27ddc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="679a2d9b-fe99-4e95-bacb-617f2ee27ddc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -251,7 +249,7 @@
       <workItem from="1534731266654" duration="7231000" />
       <workItem from="1534742971838" duration="11918000" />
       <workItem from="1534759381921" duration="23000" />
-      <workItem from="1534846543180" duration="307000" />
+      <workItem from="1534846543180" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="添加@Service注解，如果是@AutoWire ,需要加上@Service">
       <created>1534731779824</created>
@@ -288,14 +286,22 @@
       <option name="project" value="LOCAL" />
       <updated>1534757407971</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加@Service注解，如果是@AutoWire ,需要加上@Service">
+      <created>1534846858463</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1534846858463</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19544000" />
+    <option name="totallyTimeSpent" value="20192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.19556025" />
