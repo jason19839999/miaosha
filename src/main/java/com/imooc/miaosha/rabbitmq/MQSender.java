@@ -35,11 +35,11 @@ public class MQSender {
 		amqpTemplate.convertAndSend(MQConfig.TOPIC_EXCHANGE, "topic.key2", msg+"2");
 	}
 //	
-//	public void sendFanout(Object message) {
-//		String msg = RedisService.beanToString(message);
-//		log.info("send fanout message:"+msg);
-//		amqpTemplate.convertAndSend(MQConfig.FANOUT_EXCHANGE, "", msg);
-//	}
+	public void sendFanout(Object message) {
+		String msg = RedisService.beanToString(message);
+		log.info("send fanout message:"+msg);
+		amqpTemplate.convertAndSend(MQConfig.FANOUT_EXCHANGE, "", msg);
+	}
 //	
 //	public void sendHeader(Object message) {
 //		String msg = RedisService.beanToString(message);
