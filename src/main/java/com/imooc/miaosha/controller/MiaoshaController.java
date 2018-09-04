@@ -108,6 +108,9 @@ public class MiaoshaController implements InitializingBean {
             return Result.error(CodeMsg.MIAO_SHA_OVER);
         }
         //预减库存
+        //注意:预减库存这，如果是多台负载需要用redission分布式锁控制
+        //具体参照项目：D:\myTools\SPRING BOOT & MYSQL\2-SPRING BOOT 源代码\crudreposity实现读写分离和Redis处理（经典）
+        // \crudreposity\src\main\java\datacenter\crudreposity\action\girlController.java  → /distributted
         long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock, "" + goodsId);//10
         if (stock < 0) {
             localOverMap.put(goodsId, true);
