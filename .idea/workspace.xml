@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="679a2d9b-fe99-4e95-bacb-617f2ee27ddc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="RedisController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+            <state relative-caret-position="580">
+              <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
               <folding>
                 <element signature="e#851#857#0" expanded="true" />
               </folding>
@@ -26,17 +26,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/JsonUtils.java">
+      <file leaf-file-name="RedisService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="67" column="74" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="74" />
+            <state relative-caret-position="1133">
+              <caret line="230" column="31" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="31" />
               <folding>
-                <element signature="docComment;class#JsonUtils#0" />
-                <element signature="docComment;method#objectToJson#0;class#JsonUtils#0" />
-                <element signature="docComment;method#jsonToPojo#0;class#JsonUtils#0" />
-                <element signature="method#jsonToPojo#0;class#JsonUtils#0" />
-                <element signature="docComment;method#jsonToList#0;class#JsonUtils#0" />
+                <element signature="docComment;method#set#0;class#RedisService#0" />
+                <element signature="method#set#0;class#RedisService#0" />
+                <element signature="method#setNXEX#0;class#RedisService#0" />
+                <element signature="docComment;method#exists#0;class#RedisService#0" />
+                <element signature="method#exists#0;class#RedisService#0" />
+                <element signature="docComment;method#delete#0;class#RedisService#0" />
+                <element signature="method#delete#0;class#RedisService#0" />
+                <element signature="docComment;method#incr#0;class#RedisService#0" />
+                <element signature="method#incr#0;class#RedisService#0" />
+                <element signature="docComment;method#decr#0;class#RedisService#0" />
+                <element signature="method#decr#0;class#RedisService#0" />
+                <element signature="method#delete#1;class#RedisService#0" />
+                <element signature="method#scanKeys#0;class#RedisService#0" />
+                <element signature="method#beanToString#0;class#RedisService#0" />
+                <element signature="method#stringToBean#0;class#RedisService#0" />
               </folding>
             </state>
           </provider>
@@ -59,6 +69,7 @@
       <find>org.mybatis</find>
       <find>do_login</find>
       <find>rabbi</find>
+      <find>redis</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,16 +155,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="miaosha" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
-              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="miaosha" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="miaosha" type="b2602c69:ProjectViewProjectNode" />
@@ -299,7 +301,7 @@
       <workItem from="1536908581749" duration="2894000" />
       <workItem from="1538014842217" duration="635000" />
       <workItem from="1538187364665" duration="7325000" />
-      <workItem from="1538963246107" duration="6039000" />
+      <workItem from="1538963246107" duration="6724000" />
     </task>
     <task id="LOCAL-00001" summary="添加@Service注解，如果是@AutoWire ,需要加上@Service">
       <created>1534731779824</created>
@@ -399,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538985879559</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加redis list与string之间的相互转换">
+      <created>1538987119032</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1538987119032</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57472000" />
+    <option name="totallyTimeSpent" value="58157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -496,7 +505,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加@Service注解，如果是@AutoWire ,需要加上@Service" />
     <MESSAGE value="秒杀---------预减库存添加分布式锁" />
-    <option name="LAST_COMMIT_MESSAGE" value="秒杀---------预减库存添加分布式锁" />
+    <MESSAGE value="添加redis list与string之间的相互转换" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加redis list与string之间的相互转换" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -519,32 +529,17 @@
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.jar!/org/springframework/web/servlet/config/annotation/InterceptorRegistry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.12.RELEASE/spring-webmvc-4.3.12.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.12.RELEASE/spring-core-4.3.12.RELEASE.jar!/org/springframework/core/MethodParameter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1000">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.12.RELEASE/spring-web-4.3.12.RELEASE.jar!/org/springframework/web/method/support/HandlerMethodArgumentResolver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -738,20 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="81" column="21" lean-forward="true" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="5" selection-start-line="22" selection-end-line="42" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -871,12 +852,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/JsonUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="67" column="74" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="74" />
+          <folding>
+            <element signature="docComment;class#JsonUtils#0" />
+            <element signature="docComment;method#objectToJson#0;class#JsonUtils#0" />
+            <element signature="docComment;method#jsonToPojo#0;class#JsonUtils#0" />
+            <element signature="method#jsonToPojo#0;class#JsonUtils#0" />
+            <element signature="docComment;method#jsonToList#0;class#JsonUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.9.0/jedis-2.9.0.jar!/redis/clients/jedis/JedisPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisPoolFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="37" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="229" lean-forward="true" selection-start-line="229" selection-end-line="229" />
+        <state relative-caret-position="1133">
+          <caret line="230" column="31" selection-start-line="230" selection-start-column="22" selection-end-line="230" selection-end-column="31" />
           <folding>
-            <element signature="method#get#0;class#RedisService#0" />
             <element signature="docComment;method#set#0;class#RedisService#0" />
             <element signature="method#set#0;class#RedisService#0" />
             <element signature="method#setNXEX#0;class#RedisService#0" />
@@ -892,29 +924,14 @@
             <element signature="method#scanKeys#0;class#RedisService#0" />
             <element signature="method#beanToString#0;class#RedisService#0" />
             <element signature="method#stringToBean#0;class#RedisService#0" />
-            <element signature="method#returnToPool#0;class#RedisService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="67" column="74" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="74" />
-          <folding>
-            <element signature="docComment;class#JsonUtils#0" />
-            <element signature="docComment;method#objectToJson#0;class#JsonUtils#0" />
-            <element signature="docComment;method#jsonToPojo#0;class#JsonUtils#0" />
-            <element signature="method#jsonToPojo#0;class#JsonUtils#0" />
-            <element signature="docComment;method#jsonToList#0;class#JsonUtils#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        <state relative-caret-position="580">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
           <folding>
             <element signature="e#851#857#0" expanded="true" />
           </folding>

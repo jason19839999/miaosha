@@ -39,10 +39,12 @@ public class RedisController {
 		userList.add(u1);
 		userList.add(u2);
 
+		//List转string
 		redisService.set(MiaoshaUserKey.token,"json:info:userlist", JsonUtils.objectToJson(userList));
 		
 		String userListJson = redisService.get(MiaoshaUserKey.token,"json:info:userlist");
 
+		//string转List
 		List<User> userListBorn = JsonUtils.jsonToList(userListJson, User.class);
 		
 		return userListBorn;
