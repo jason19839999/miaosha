@@ -228,4 +228,17 @@ public class RedisService {
 		 }
 	}
 
+	public String get(KeyPrefix prefix, String key) {
+		Jedis jedis = null;
+		try {
+			jedis =  jedisPool.getResource();
+			//生成真正的key
+			String realKey  = prefix.getPrefix() + key;
+			String  str = jedis.get(realKey);
+			return str;
+		}finally {
+			returnToPool(jedis);
+		}
+	}
+
 }
