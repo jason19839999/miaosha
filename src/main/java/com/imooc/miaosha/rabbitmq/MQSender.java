@@ -18,6 +18,9 @@ public class MQSender {
 	@Autowired
 	AmqpTemplate amqpTemplate ;
 
+	@Autowired
+    RabbitTemplate rabbitTemplate;
+
 	//发送成功之后回调函数
 	final RabbitTemplate.ConfirmCallback confirmCallback  = new RabbitTemplate.ConfirmCallback() {
 		@Override
@@ -31,9 +34,11 @@ public class MQSender {
 	};
 	
 	public void sendMiaoshaMessage(MiaoshaMessage mm) {
+	    //
+        rabbitTemplate.setConfirmCallback(confirmCallback);
 		String msg = RedisService.beanToString(mm);
 		log.info("send message:"+msg);
-		amqpTemplate.convertAndSend(MQConfig.MIAOSHA_QUEUE, msg);
+        rabbitTemplate.convertAndSend(MQConfig.MIAOSHA_QUEUE, msg);
 	}
 	
 	public void send(Object message) {

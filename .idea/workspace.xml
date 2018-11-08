@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="679a2d9b-fe99-4e95-bacb-617f2ee27ddc" name="Default" comment="添加redis list与string之间的相互转换">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="679a2d9b-fe99-4e95-bacb-617f2ee27ddc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +18,21 @@
       <file leaf-file-name="MQSender.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="260">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="24" />
               <folding>
+                <element signature="e#645#822#0" expanded="true" />
                 <element signature="e#821#822#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MQReceiver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQReceiver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -29,8 +40,8 @@
       <file leaf-file-name="MQConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+            <state relative-caret-position="180">
+              <caret line="22" column="46" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -71,6 +82,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/RedisService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/controller/RedisController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/redis/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java" />
       </list>
     </option>
@@ -303,7 +315,7 @@
       <workItem from="1541402924751" duration="1211000" />
       <workItem from="1541570542860" duration="628000" />
       <workItem from="1541647592637" duration="2196000" />
-      <workItem from="1541659620588" duration="573000" />
+      <workItem from="1541659620588" duration="1536000" />
     </task>
     <task id="LOCAL-00001" summary="添加@Service注解，如果是@AutoWire ,需要加上@Service">
       <created>1534731779824</created>
@@ -424,11 +436,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541660048259</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="添加redis list与string之间的相互转换">
+      <created>1541660402758</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1541660402758</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81446000" />
+    <option name="totallyTimeSpent" value="82409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -521,9 +540,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加@Service注解，如果是@AutoWire ,需要加上@Service" />
     <MESSAGE value="秒杀---------预减库存添加分布式锁" />
-    <MESSAGE value="添加redis list与string之间的相互转换" />
     <MESSAGE value="amqp增加发送成功与否回调函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="amqp增加发送成功与否回调函数" />
+    <MESSAGE value="添加redis list与string之间的相互转换" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加redis list与string之间的相互转换" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="48" column="53" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/access/AccessInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -872,13 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="712">
           <caret line="47" column="43" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -910,16 +915,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+        <state relative-caret-position="180">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/miaosha/rabbitmq/MQSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        <state relative-caret-position="260">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="24" />
           <folding>
+            <element signature="e#645#822#0" expanded="true" />
             <element signature="e#821#822#0" expanded="true" />
           </folding>
         </state>
