@@ -77,6 +77,10 @@ public class AccessInterceptor  extends HandlerInterceptorAdapter{
 	}
 
 	private MiaoshaUser getUser(HttpServletRequest request, HttpServletResponse response) {
+		//在这项目中前台没有接口没有传递token,所以只能读取cookie了，
+		// get/post的方式参照datacenter项目，在filter过滤器已经实现了这两种校验用户的方式，并通过resolveArgument处理了接口user参数。。。
+		// //此拦截器适合web端方式请求，即http://localhost:8086/denglu?token=999这种方式的。。。不适合app客户端请求，app客户端用OncePerRequestFilter 的 TokenFilter。。。
+		// POST方式：参数type：JSON  不能再这里加这个读取【request】对象，会报错 java.io.IOException: Stream closed，放到doFilterInternal就可以了。
 		String paramToken = request.getParameter(MiaoshaUserService.COOKI_NAME_TOKEN);
 		String cookieToken = getCookieValue(request, MiaoshaUserService.COOKI_NAME_TOKEN);
 		if(StringUtils.isEmpty(cookieToken) && StringUtils.isEmpty(paramToken)) {
